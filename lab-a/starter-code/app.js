@@ -59,10 +59,12 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   var output = [];
   var totalSum = sum(sum(a,b)[0],c)[0];
   var totalMult = multiply(multiply(a,b)[0],c)[0];
+
   output.push(totalSum);
   output.push(totalMult);
   output.push(a + ' and ' + b + ' and ' + c + ' sum to ' + totalSum + '.');
   output.push('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + totalMult + '.');
+  return output;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
