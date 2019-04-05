@@ -57,27 +57,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
   var output = [];
-  console.log(output.push(sum()));
-  output.push(multiply());
-  console.log(output.push(a + ' and ' + b + ' and ' + c + ' sum to ' + sum() + '.'));
-  output.push('The Product of 4 ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply() + '.');
-  
-  function sum() {
-    var totalSum = 0;
-    for (var i = 0; i < sumAndMultiply.length; i++) {
-      totalSum += sumAndMultiply[i];
-    }
-    return totalSum;
-  }
-
-  function multiply(){
-    var totalMul = 0;
-    for (var i = 0; i < sumAndMultiply.length; i++) {
-      totalMul *= sumAndMultiply[i];
-    }
-    return totalMul;
-  }
-  return output;
+  var totalSum = sum(sum(a,b)[0],c)[0];
+  var totalMult = multiply(multiply(a,b)[0],c)[0];
+  output.push(totalSum);
+  output.push(totalMult);
+  output.push(a + ' and ' + b + ' and ' + c + ' sum to ' + totalSum + '.');
+  output.push('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + totalMult + '.');
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -99,10 +84,15 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+<<<<<<< HEAD
   var sum1 = sum(testArray[0],testArray[1]);
   var totalSum = sum(sum1, testArray[2]);
   
 
+=======
+  
+  
+>>>>>>> 85825b336259ee31d58acde62c616e15e6e582b9
 }
 
 // Here is the test for sumArray(); uncomment it to run it
